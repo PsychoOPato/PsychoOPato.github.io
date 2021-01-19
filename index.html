@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROLADOR DE DADO DO PATÃO!11!1</title>
+    <style type='text/css'>
+    div.dado{
+        float:left;
+        width:32px;
+        background:black;
+        border:white 1px solid;
+        padding:10px;
+        font-size:24px;
+        text-align:center;
+        margin:auto;
+        color:white
+    } 
+    </style>
+</head>
+<body>
+    <script>
+        function rollDice() {
+            var vald100n = 69;
+            var vald100b = Math.floor(vald100n/2)+1
+            var vald100e = Math.floor(vald100n/5)+1
+            var d100 = document.getElementById('dado');
+            var status = document. getElementById('status');
+            var rolld100 = Math.floor(Math.random() * 100) + 1;
+            var result = '';
+            if (rolld100 <= vald100e) {
+                result = 'sucesso extremo'
+            }
+            else {
+                if (rolld100 <= vald100b) {
+                    result = 'sucesso bom'
+                }
+                else {
+                    if (rolld100 <= vald100n) {
+                        result = 'sucesso normal'
+                    }
+                    else {
+                        result = 'fracasso'
+                    }
+                }
+            }
+            dado.innerHTML = rolld100;
+            status.innerHTML = `Você rolou ${rolld100}, e isso é um ${result}.`
+        }
+    </script>
+
+    <div id='dado' class='dado'>0</div>
+    <button onclick='rollDice()'>Rolar dado</button>
+    <h2 id='status' style='clear:left;'></h2>
+</body>
+</html> 
