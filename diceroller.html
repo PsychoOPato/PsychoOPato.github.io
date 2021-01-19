@@ -6,7 +6,7 @@
     <title>ROLADOR DE DADO DO PATÃO!11!1</title>
     <style type='text/css'>
     div.dado{
-        float:left;
+        float:center;
         width:32px;
         background:black;
         border:white 1px solid;
@@ -15,7 +15,7 @@
         text-align:center;
         margin:auto;
         color:white
-    } 
+    }
     </style>
 </head>
 <body>
@@ -45,12 +45,14 @@
                 }
             }
             dado.innerHTML = rolld100;
-            status.innerHTML = `Você rolou ${rolld100}, e isso é um ${result}.`
+            status.innerHTML = `<center>Você rolou ${rolld100}, e isso é um ${result}.</center>`
         }
     </script>
 
     <div id='dado' class='dado'>0</div>
-    <button onclick='rollDice()'>Rolar dado</button>
+    <center>
+    <button id='roll' onclick='rollDice()'>Rolar dado</button>
+    </center>
     <h2 id='status' style='clear:left;'></h2>
 </body>
 </html> 
