@@ -35,18 +35,23 @@
             var rolld100 = Math.floor(Math.random() * 100) + 1;
             var result = '';
             if (rolld100 <= vald100e) {
-                result = 'sucesso extremo'
+                result = `sucesso extremo`
             }
             else {
                 if (rolld100 <= vald100b) {
-                    result = 'sucesso bom'
+                    result = `sucesso bom`
                 }
                 else {
                     if (rolld100 <= vald100n) {
-                        result = 'sucesso normal'
+                        result = `sucesso normal`
                     }
                     else {
-                        result = 'fracasso'
+                        if (rolld100 < 100) {
+                        result = `fracasso`
+                        }
+                        else {
+                            result = `desastre`
+                        }
                     }
                 }
             }
