@@ -35,28 +35,28 @@
             var rolld100 = Math.floor(Math.random() * 100) + 1;
             var result = '';
             if (rolld100 <= vald100e) {
-                result = `sucesso extremo`
+                result = `Sucesso extremo`
             }
             else {
                 if (rolld100 <= vald100b) {
-                    result = `sucesso bom`
+                    result = `Sucesso bom`
                 }
                 else {
                     if (rolld100 <= vald100n) {
-                        result = `sucesso normal`
+                        result = `Sucesso normal`
                     }
                     else {
                         if (rolld100 < 100) {
-                        result = `fracasso`
+                        result = `Fracasso`
                         }
                         else {
-                            result = `desastre`
+                            result = `Desastre`
                         }
                     }
                 }
             }
             dado.innerHTML = rolld100;
-            status.innerHTML = `<center>Você rolou ${rolld100}, e isso é um ${result}.</center>`
+            status.innerHTML = `<center>${result}</center>`
         }
     </script>
 
